@@ -1,45 +1,42 @@
-import React from "react";
-import PieChartDisplay from "./PieChart";
-
+import React from 'react';
+import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts';
+ 
+const data = [
+  { name: 'CAR', value: 25 },
+  { name: 'BIKE AND SCOOTER', value: 35 },
+  { name: 'TRUCK', value: 20 },
+  { name: 'AUTO', value: 15 },
+  { name: 'TRACTOR', value: 5 },
+];
+ 
+const COLORS = ['#FF69B4', '#FF7F50', '#87CEEB', '#FFD700', '#40E0D0'];
+ 
 const VehicleChart = () => {
-
- const data = {
-  labels: ['CAR', 'BIKE AND SCOOTER', 'TRUCK', 'AUTO', 'TRACTOR'],
-  datasets: [
-    {
-      data: [20, 40, 10, 20, 10],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-      ],
-      borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
-
   return (
-    <>
-        <div className="bg-white p-4">
-          <h3 className="text-gray-600 text-sm font-medium mb-4">
-            Vehicle Type <span className="text-gray-400 mx-1">›</span> App
-            Registered Users Count Sub Tradewise
-          </h3>
-          <PieChartDisplay data={data} />
-        </div>
-    </>
+    <div className="bg-white p-4 rounded-lg shadow h-[400px]">
+      <h2 className="text-lg font-semibold mb-4">Vehicle Type › App Registered Users Count Sub Tradewise</h2>
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+        <Legend verticalAlign="top"/>
+          <Pie
+            data={data}
+            cx="50%"
+            cy="50%"
+            labelLine={true}
+            outerRadius={120}
+            fill="#8884d8"
+            dataKey="value"
+            // label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+          >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            ))}
+          </Pie>
+          <Tooltip />
+        </PieChart>
+      </ResponsiveContainer>
+    </div>
   );
 };
-
+ 
 export default VehicleChart;

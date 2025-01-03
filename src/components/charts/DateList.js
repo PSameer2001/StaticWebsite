@@ -12,11 +12,11 @@ const dates = [
 
 const DateList = () => {
   return (
-    <div className="bg-blue-50 p-4 rounded-lg">
+    <div className="bg-blue-50 p-4 rounded-lg min-w-40">
       {dates.map((item) => (
-        <div key={item.date} className="flex justify-between py-2 text-sm border-b border-blue-100 last:border-0">
-          <span className="text-gray-600">{item.date} - {item.day}</span>
-          <span className="font-medium">{item.value}</span>
+        <div key={item.date} className="flex justify-between py-2 text-sm border-b border-blue-100 last:border-0 px-4">
+          <span className="text-gray-600 text-xs">{item.date} - {item.day}</span>
+          <span className="font-medium ml-">{item.value}</span>
         </div>
       ))}
     </div>
