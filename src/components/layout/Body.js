@@ -8,7 +8,7 @@ const Body = () => {
     <>
       <div className="grid grid-cols-1 gap-6 mb-8">
         <StatGrid />
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
           <MapChart />
           <VehicleChart />
         </div>

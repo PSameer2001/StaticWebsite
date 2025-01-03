@@ -8,7 +8,10 @@ import {
   Calendar,
   FileText,
   Gift,
-  UserCheck
+  UserCheck,
+  Wrench,
+  Banknote,
+  HandCoins
 } from "lucide-react";
 
 const MenuItem = ({ icon: Icon, text, active }) => (
@@ -27,8 +30,9 @@ const MenuItem = ({ icon: Icon, text, active }) => (
 const Sidebar = ({ isOpen }) => {
   
   const menuItems = [
-    { icon: LayoutGrid, text: "MLP Dashboard", active: true },
+    { icon: LayoutGrid, text: "MLP Dashboard", active: false },
     { icon: LayoutGrid, text: "RLP Dashboard", active: false },
+    { icon: Wrench, text: "View Mechanic", active: false },
     { icon: Users, text: "View Retailer", active: false },
     { icon: BarChart3, text: "User Insights", active: false },
     { icon: Database, text: "SKU-wise Data", active: false },
@@ -36,8 +40,10 @@ const Sidebar = ({ isOpen }) => {
     { icon: Calendar, text: "View Redemption", active: false },
     { icon: FileText, text: "View Expiry", active: false },
     { icon: Gift, text: "View Transaction", active: false },
-    { icon: Gift, text: "Rewards Catalogue", active: false },
+    { icon: Banknote, text: "View E-Transfer", active: false },
+    { icon: HandCoins, text: "Rewards Catalogue", active: false },
     { icon: UserCheck, text: "User Activity", active: false },
+    { icon: LayoutGrid, text: "RLP Dashboard", active: false },
   ];
 
   return (

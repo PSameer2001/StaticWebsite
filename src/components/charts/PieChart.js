@@ -1,17 +1,12 @@
 import React from "react";
-import { PieChart } from "@mui/x-charts/PieChart";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
 
-const PieChartDisplay = ({data, width, height}) => {
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+const PieChartDisplay = ({data}) => {
   return (
-    <PieChart
-      series={[
-        {
-          data: data,
-        },
-      ]}
-      width={width}
-      height={height}
-    />
+    <Pie data={data} />
   );
 };
 

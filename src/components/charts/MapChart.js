@@ -9,7 +9,7 @@ const MapChart = () => {
       <div className="aspect-w-4 aspect-h-3 bg-gray-50 rounded-lg">
         {/* Map placeholder - would use a real map library in production */}
         <div className="flex items-center justify-center text-gray-400">
-          India Map View
+          India map View
         </div>
       </div>
     </div>
