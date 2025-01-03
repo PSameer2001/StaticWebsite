@@ -16,11 +16,16 @@ const Header = ({ onMenuClick }) => {
               </button>
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-sm font-medium text-blue-500">
-                OPERATIONS ADMIN
-              </span>
-              <span className="text-sm text-gray-600">Rahul Lad</span>
-              <ChevronDown size={16} className="text-gray-400" />
+              <div className="flex flex-col">
+                <span className="text-sm font-medium text-blue-500">
+                  OPERATIONS ADMIN
+                </span>
+                <div className="flex flex-row">
+                <span className="text-sm text-gray-600">Rahul Lad  </span>
+                <ChevronDown size={16} className="text-gray-400 mt-1" />
+                </div>
+              </div>
+             
             </div>
           </div>
         </div>
