@@ -29,7 +29,7 @@ const Home = () => {
       {isSidebarOpen && <Sidebar isOpen={isSidebarOpen} />}
       <div className={`flex-1 ${isSidebarOpen ? 'ml-44' : ''}`}>
         <Header onMenuClick={toggleSidebar} />
-        <main className="flex-1 p-6 bg-gray-50 mt-6">
+        <main className="flex-1 p-6 bg-gray-50">
           <Body />
         </main>
       </div>
