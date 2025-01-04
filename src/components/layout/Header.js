@@ -4,7 +4,7 @@ import { Menu, ChevronDown } from "lucide-react";
 const Header = ({ onMenuClick }) => {
   return (
     <>
-      <header className="bg-white shadow-sm">
+      <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-full px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -30,17 +30,6 @@ const Header = ({ onMenuClick }) => {
           </div>
         </div>
       </header>
-
-      {/* <header className="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-semibold text-gray-800">Dashboard</h1>
-        <div className="flex items-center space-x-4">
-          <span className="text-gray-600">OPERATIONS ADMIN</span>
-          <div className="flex items-center">
-            <span className="bg-blue-100 p-2 rounded-full">RL</span>
-            <span className="ml-2 text-gray-700">Rahul Lad</span>
-          </div>
-        </div>
-      </header> */}
     </>
   );
 };

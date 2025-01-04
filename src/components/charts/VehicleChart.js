@@ -13,7 +13,7 @@ const COLORS = ['#FF69B4', '#FF7F50', '#87CEEB', '#FFD700', '#40E0D0'];
  
 const VehicleChart = () => {
   return (
-    <div className="bg-white p-4 rounded-lg shadow h-[400px]">
+    <div className="bg-white p-4 rounded-lg shadow h-[450px] min-h-fit">
       <h2 className="text-lg font-semibold mb-4">Vehicle Type › App Registered Users Count Sub Tradewise</h2>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>

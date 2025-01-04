@@ -12,12 +12,12 @@ const StatCard = ({ title, value, average, period, isHighlighted }) => {
         onMouseLeave={() => {
           setShowData(false);
         }}
-        className={`flex flex-col justify-between p-6 rounded-lg mb-2 ${
+        className={`flex flex-col justify-between p-6 rounded-lg mb-2 h-full ${
           showData ? "bg-blue-50" : "bg-white"
         }`}
       >
+        <div>
         <h3 className="text-gray-600 text-base font-medium">{title}</h3>
-        <div className="mt-1">
           <span className="text-sm font-semibold text-gray-900">{value}</span>
         </div>
         <div className="mt-2 text-sm border-t-2">

@@ -27,9 +27,9 @@ const Home = () => {
   return (
     <div className="flex min-h-screen">
       {isSidebarOpen && <Sidebar isOpen={isSidebarOpen} />}
-      <div className="flex-1 flex flex-col">
+      <div className={`flex-1 ${isSidebarOpen ? 'ml-44' : ''}`}>
         <Header onMenuClick={toggleSidebar} />
-        <main className="flex-1 p-6 bg-gray-50">
+        <main className="flex-1 p-6 bg-gray-50 mt-6">
           <Body />
         </main>
       </div>

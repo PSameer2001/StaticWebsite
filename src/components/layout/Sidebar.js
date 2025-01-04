@@ -16,7 +16,7 @@ import {
 
 const MenuItem = ({ icon: Icon, text, active }) => (
   <div
-    className={`flex items-center space-x-3 px-4 py-2 text-sm ${
+    className={`flex items-center space-x-3 px-4 py-2 text-sm  ${
       active
         ? "bg-gray-700 text-white"
         : "text-gray-400 hover:bg-gray-700 hover:text-white"
@@ -49,8 +49,8 @@ const Sidebar = ({ isOpen }) => {
   return (
     <div
       className={`${
-        isOpen ? "w-64" : "w-0"
-      } bg-gray-800 min-h-screen transition-all duration-300 overflow-hidden top-0 left-0`}
+        isOpen ? "w-44" : "w-0"
+      } bg-gray-800 min-h-screen transition-all duration-300 fixed top-0 left-0`}
     >
       <div className="p-4">
         <img
